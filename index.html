@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+
+    <!-- required html meta tags -->
+    <meta charset="utf-8">
+    
+    <!-- meta tags for SEO.--> 
+    <!-- The description meta tag defines the description for a webpage. -->
+    <!-- The keywords meta tag defines keywords for search engines. -->
+    <meta name="description" content="Building modern responsive website with html5, css3, jQuery & bootstrap framework">
+    <meta name="keywords" content="HTML5, CSS3, jQuery, Bootstrap, Web Design, Web Development, Responsive website, Modern website">
+    
+    <meta http-equiv="X-UA-C-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title>
+        Modern Responsive Website
+    </title>
+
+    <!-- Favicon, google fonts, fontawesome icons, bootstrap CSS, animate CSS, Magnific Popup core CSS file, Owl Carousel CSS file & Style CSS files linked to this html file -->
+
+    <!-- <link> tag defines the link between a document and an external resource. <rel> attribute defines the relationship between two documents-->
+    <!-- whatever we write in style.css will be applied to index.html file -->
+    <!-- We need to add google font before the style.css -->
+    <!-- Because Responsive.css will overwrite rules in style.css for certain media sizes, we will write it after style.css -->
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+
+</head>
+
+<!-- 
+Attributes added for scroll spy as per BS documentation
+We add the data offset attribute because the menu height causes the menu to be highlighted/be in the active state a little late 
+when we are already inside the corresponding part of the webpage.
+We see that the menu height is 65px and so we use data-offset attribute to compensate for it.
+Data-Offset value is the number of pixels to be offset when calculating the position of the scroll.
+-->
+
+<!-- <body data-spy="scroll" data-target=".vesco-top-navbar" data-offset="65"> Since we removed the .vesco-top-navbar -->
+
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+
+    <!----------------- Header ---------------------->
+    <!--  
+        The Header is used for an introductory content or a set of Navigation links.
+    -->
+    <header>
+
+        <!-- 
+        The <nav> tag is used to define a set of navigation links.
+        For Navigation: BS NavBar Component - class="navbar navbar-inverse navbar-default".
+        .navbar adds a white or blank navigation bar at the top of the webpage.
+        .navbar-inverse adds a black component in the navigation bar. 
+        .navbar-fixed-top fixes the navigation bar at the top even when scrolling down.
+        .navbar-header to represent logo inside this navbar.
+        .navbar-brand for the anchor element to include the logo.
+        .nav navbar-nav makes an ul a menu
+        <button .navbar-toggle collapsed ... > provides a collapsable navigation bar when viewed on small screens by controlling the menu id.
+        .collapse .navbar-collapse will allow the navigation bar to collapse.
+        .vesco-top-navbar is not a BS class and is a custom class to change the black background of top navbar & 
+        the toggle button provided by .navbar-inverse to a custom transparent one.
+        
+         -->
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> -->
+
+        <!-- We remove the .vesco-top-navbar to prevent having the black navigation bar upon page load. -->
+        <!-- <nav class="navbar vesco-top-navbar navbar-fixed-top" role="navigation"> -->
+        <nav class="navbar navbar-fixed-top">
+
+            <!-- .container-fluid will take the full-width of the webpage -->
+            <div class="container-fluid">
+
+                <div class="vesco-nav-wrapper">
+
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#vesco-menu-wrapper">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="navbar-brand" href="#home">
+                            <img src="img/logo.png" alt="logo">
+                        </a>
+
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="vesco-menu-wrapper">
+
+                        <ul class="nav navbar-nav">
+                            <li><a class="smooth-scroll" href="#home"> Home </a></li>
+                            <li><a class="smooth-scroll" href="#services"> Services </a></li>
+                            <li><a class="smooth-scroll" href="#about"> About </a></li>
+                            <li><a class="smooth-scroll" href="#work"> Work </a></li>
+                            <li><a class="smooth-scroll" href="#team"> Team </a></li>
+                            <li><a class="smooth-scroll" href="#testimonials"> Testimonials </a></li>
+                            <li><a class="smooth-scroll" href="#pricing"> Pricing </a></li>
+                            <li><a class="smooth-scroll" href="#stats"> Stats </a></li>
+                            <li><a class="smooth-scroll" href="#clients"> Clients </a></li>
+                            <li><a class="smooth-scroll" href="#contact"> Contact </a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!----------------- Home ---------------------->
+
+    <section id="home">
+
+        <div id="home-cover" class="bg-parallax animated fadeIn">
+            <!-- To insert background image & responsiveness -->
+
+            <div id="home-content-box">
+                <!-- To become "full page" table -->
+
+                <div id="home-content-box-inner" class="text-center">
+                    <!-- To become table cell with contents of heading and button to align in the center using BS predefined class text-center -->
+
+                    <div id="home-heading" class="animated zoomIn">
+                        <h3>Watch Out<br>The Modern Responsive Website</h3>
+                    </div>
+                    <div id="home-button" class="animated zoomIn">
+                        <a class="btn btn-lg btn-general btn-white smooth-scroll" href="#work" role="button" title="View Our Work">View Our Work</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!----------------- Services ---------------------->
+
+    <section id="services">
+        <div class="content-box">
+
+            <!-- Title/Headings within content box & added WOW JS animation classes and attributes -->
+
+            <div class="content-title wow animated fadeInDown " data-wow-duration="1s" data-wow-delay=".5s">
+
+                <!-- Doesn't need animated class because they are already there by default. -->
+
+                <h3> Services </h3>
+                <div class="content-title-underline">
+                </div>
+
+            </div>
+
+            <!-- BS Grid System within content box -->
+
+            <div class="container">
+                <!-- Added animation on scroll as in title -->
+                <div class="row">
+                    
+                    <!-- 
+                        By adding col-sm-6, we can display 2 service items per row, which is what we want.
+                    -->
+
+                    <!-- BS Grid Col Group 1 -->
+
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="service-items wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <div class="service-item-icon">
+                                <i class="fa fa-paint-brush fa-3x"></i>
+                            </div>
+                            <div class="service-item-title">
+                                <h3> Web Design </h3>
+                            </div>
+                            <div class="service-item-description">
+                                <p>lorem ipsum extension in the bracket is not working for me.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BS Grid Col Group 2 -->
+
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="service-items wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <div class="service-item-icon">
+                                <i class="fa fa-laptop fa-3x"></i>
+                            </div>
+                            <div class="service-item-title">
+                                <h3> Web Development </h3>
+                            </div>
+                            <div class="service-item-description">
+                                <p>lorem ipsum extension in the bracket is not working for me.</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- BS Grid Col Group 3 -->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="service-items wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <div class="service-item-icon">
+                                <i class="fa fa-mobile fa-3x"></i>
+                            </div>
+                            <div class="service-item-title">
+                                <h3> Mobile Apps </h3>
+                            </div>
+                            <div class="service-item-description">
+                                <p>lorem ipsum extension in the bracket is not working for me.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BS Grid Col Group 4 -->
+
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="service-items wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <div class="service-item-icon">
+                                <i class="fa fa-search fa-3x"></i>
+                            </div>
+                            <div class="service-item-title">
+                                <h3> SEO Optimization </h3>
+                            </div>
+                            <div class="service-item-description">
+                                <p>lorem ipsum extension in the bracket is not working for me.</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- BS Grid Col Group 5 -->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="service-items wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <div class="service-item-icon">
+                                <i class="fa fa-pencil-square-o fa-3x"></i>
+                            </div>
+                            <div class="service-item-title">
+                                <h3> UX Design </h3>
+                            </div>
+                            <div class="service-item-description">
+                                <p>lorem ipsum extension in the bracket is not working for me.</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- BS Grid Col Group 6 -->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="service-items wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <div class="service-item-icon">
+                                <i class="fa fa-life-ring fa-3x"></i>
+                            </div>
+                            <div class="service-item-title">
+                                <h3> Support </h3>
+                            </div>
+                            <div class="service-item-description">
+                                <p>lorem ipsum extension in the bracket is not working for me.</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- End of row class -->
+                </div>
+                <!-- End of container -->
+            </div>
+            <!-- End of Content Box -->
+        </div>
+
+    </section>
+
+    <!----------------- About ---------------------->
+
+    <section id="about">
+
+        <!-- Right Side Diagonal BackGround Image with Parallax effect -->
+        <div id="about-BG-Diagonal" class="bg-parallax">
+
+        </div>
+
+        <!-- Left Side with container BG for Grid System -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="about-content-box">
+                        <div id="about-content-box-outer">
+                            <div id="about-content-box-inner">
+
+                                <!-- Actual About heading, description and button here -->
+                                <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <h3> About Vesco </h3>
+                                    <div class="content-title-underline"></div>
+                                </div>
+
+                                <div id="about-description" class="wow animated fadeInDown" data-wow-duration="1.25s" data-wow-delay=".5s">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                                </div>
+
+                                <div id="about-button" class="wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <a class="btn btn-lg btn-general btn-green smooth-scroll" href="#work" role="button" title="View Work">Our Work</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--------------- Work ------------------------->
+    <section id="work">
+
+        <!-- Content box, Content Title and Content underline are generic -->
+
+        <div class="content-box">
+            <div class="content-title wow animated fadeInDown " data-wow-duration="1s" data-wow-delay=".5s">
+                <h3> Our Work </h3>
+                <div class="content-title-underline">
+                </div>
+            </div>
+
+            <!-- BS Grid System -->
+
+            <!-- Container class in BS has fixed width while container-fluid cover full-width of the page -->
+            
+            <div class="container-fluid">
+                <div class="row no-gutters wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    
+                    <!-- BS Grid - I -->
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/1.jpg" title="Work Description Goes Here">
+                                <img src="img/work/1.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/2.jpg" title="Work Description Goes Here">
+                                <img src="img/work/2.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/3.jpg" title="Work Description Goes Here">
+                                <img src="img/work/3.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/4.jpg" title="Work Description Goes Here">
+                                <img src="img/work/4.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+                    
+                    <!-- BS Grid - II -->
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/5.jpg" title="Work Description Goes Here">
+                                <img src="img/work/5.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/6.jpg" title="Work Description Goes Here">
+                                <img src="img/work/6.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/7.jpg" title="Work Description Goes Here">
+                                <img src="img/work/7.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4">
+                        <div class="image-wrapper">
+
+                            <!-- We use anchor element so as be able to use image magnifier & "img-responsive" is a predefined BS class for responsive images -->
+
+                            <a href="img/work/8.jpg" title="Work Description Goes Here">
+                                <img src="img/work/8.jpg" class="img-responsive" alt="Work">
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Content box-->
+        </div>
+
+    </section>
+
+    <!--------------- Team ------------------------->
+    <section id="team">
+
+        <!-- Content box, Content Title and Content underline are generic -->
+
+        <div class="content-box">
+            <div class="content-title wow animated fadeInDown " data-wow-duration="1s" data-wow-delay=".5s">
+                <h3> Our Team </h3>
+                <div class="content-title-underline">
+                </div>
+            </div>
+            <!-- BS Grid System -->
+
+            <div class="container">
+                <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                    <!-- Carousel Slider requires just one column -->
+
+                    <div class="col-md-12">
+
+                        <!-- The team-member is the main wrapper for team members -->
+                        <!-- Need to add predefined class="owl-carousel" to set up HTML for OWL Carousel -->
+                        <!-- Need to add predefined class="owl-theme" for adding navigation dot through Owl CSS -->
+
+                        <div id="team-members" class="owl-carousel owl-theme">
+
+
+
+                            <!------------------- TEAM MEMBERS START------------------------------------------------->
+
+
+
+                            <!-- This block will act as a single team member - Team Member: 1 -->
+
+                            <div class="team-member">
+
+                                <!-- Use BS img-responsive class -->
+
+                                <img src="img/team/team-1.jpg" class="img-responsive" alt="team member">
+
+                                <!-- Create a separate block for textual information about the member and use BS predefined text-center -->
+
+                                <div class="team-member-info text-center">
+
+                                    <h4 class="team-member-name"> Daniel Watrous </h4>
+                                    <h4 class="team-member-designation"> CEO </h4>
+                                    <ul class="social-list">
+
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-facebook">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-twitter">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-google-plus">
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- This block will act as a single team member - Team Member: 2 -->
+
+                            <div class="team-member">
+
+                                <!-- Use BS img-responsive class -->
+
+                                <img src="img/team/team-2.jpg" class="img-responsive" alt="team member">
+
+                                <!-- Create a separate block for textual information about the member and use BS predefined text-center -->
+
+                                <div class="team-member-info text-center">
+
+                                    <h4 class="team-member-name"> Sara Smith </h4>
+                                    <h4 class="team-member-designation"> Co-Founder </h4>
+                                    <ul class="social-list">
+
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-facebook">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-twitter">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-google-plus">
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- This block will act as a single team member - Team Member: 3 -->
+
+                            <div class="team-member">
+
+                                <!-- Use BS img-responsive class -->
+
+                                <img src="img/team/team-3.jpg" class="img-responsive" alt="team member">
+
+                                <!-- Create a separate block for textual information about the member and use BS predefined text-center -->
+
+                                <div class="team-member-info text-center">
+
+                                    <h4 class="team-member-name"> Steve Mike </h4>
+                                    <h4 class="team-member-designation"> Sr. Developer </h4>
+                                    <ul class="social-list">
+
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-facebook">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-twitter">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-google-plus">
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- This block will act as a single team member - Team Member: 4 -->
+
+                            <div class="team-member">
+
+                                <!-- Use BS img-responsive class -->
+
+                                <img src="img/team/team-4.jpg" class="img-responsive" alt="team member">
+
+                                <!-- Create a separate block for textual information about the member and use BS predefined text-center -->
+
+                                <div class="team-member-info text-center">
+
+                                    <h4 class="team-member-name"> Robert Hinay </h4>
+                                    <h4 class="team-member-designation"> Sr. Designer </h4>
+                                    <ul class="social-list">
+
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-facebook">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-twitter">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-google-plus">
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- This block will act as a single team member - Team Member: 5 -->
+
+                            <div class="team-member">
+
+                                <!-- Use BS img-responsive class -->
+
+                                <img src="img/team/team-5.jpg" class="img-responsive" alt="team member">
+
+                                <!-- Create a separate block for textual information about the member and use BS predefined text-center -->
+
+                                <div class="team-member-info text-center">
+
+                                    <h4 class="team-member-name"> Mika Tera </h4>
+                                    <h4 class="team-member-designation"> Sales </h4>
+                                    <ul class="social-list">
+
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-facebook">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-twitter">
+                                                </i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="social-icon icon-grey">
+                                                <i class="fa fa-google-plus">
+                                                </i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+
+                            <!------------------- TEAM MEMBERS END ------------------------------------------------->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End of Content box-->
+        </div>
+
+    </section>
+
+    <!--------------- Testimonials ------------------------->
+    <section id="testimonials">
+
+        <!-- Background/Cover Image over the entire content box - This is similar approach to Home Section -->
+
+        <div id="testimonial-section-cover-image" class="bg-parallax">
+
+
+
+            <!-- Content box, Content Title and Content underline are generic -->
+
+            <div class="content-box">
+                <!-- content-title-white because we need a white title and black background for testimonials -->
+                <div class="content-title content-title-white wow animated fadeInDown " data-wow-duration="1s" data-wow-delay=".5s">
+                    <h3> What Our Customers Say </h3>
+                    <div class="content-title-underline">
+                    </div>
+                </div>
+
+                <!-- BS Grid System -->
+
+                <div class="container">
+                    <div class="row wow animated bounceInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="col-md-12">
+                            <div id="customer-testimonials-wrapper" class="text-center owl-carousel owl-theme">
+                                <!--
+                            .text-center: BS predefined class. Everything except the image will be center-aligned.
+                            .owl-theme class will make the carousel dots visible.
+                        -->
+                                <!-- Customer Testimonial - I -->
+
+                                <div class="testimonials">
+                                    <!--
+                            .img-circle is a BootStrap Class that Shapes the image to a circle (not available in IE8)
+                            -->
+                                    <img src="img/client/client-1.jpg" class="img-responsive img-circle" alt="testimonials">
+                                    <blockquote class="text-center">
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+                                    </blockquote>
+                                    <div class="testimonial-customer-info">
+                                        <p>
+                                            <strong> Daniel Watrous </strong>
+                                            <span> CEO & Founder -- Google </span>
+                                            <!--
+                                    <span> hooks a part of a text to something. In our case, it hooks position of the customer with his name
+                                -->
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Customer Testimonial - II -->
+
+                                <div class="testimonials">
+                                    <!--
+                            .img-circle is a BootStrap Class that Shapes the image to a circle (not available in IE8)
+                            -->
+                                    <img src="img/client/client-2.jpg" class="img-responsive img-circle" alt="testimonials">
+                                    <blockquote class="text-center">
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        </p>
+                                    </blockquote>
+                                    <div class="testimonial-customer-info">
+                                        <p>
+                                            <strong> Johan Mathew </strong>
+                                            <span> CEO & Founder -- Yahoo </span>
+                                            <!--
+                                    <span> hooks a part of a text to something. In our case, it hooks position of the customer with his name
+                                -->
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Customer Testimonial - III -->
+
+                                <div class="testimonials">
+                                    <!--
+                            .img-circle is a BootStrap Class that Shapes the image to a circle (not available in IE8)
+                            -->
+                                    <img src="img/client/client-3.jpg" class="img-responsive img-circle" alt="testimonials">
+                                    <blockquote class="text-center">
+                                        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+                                    </blockquote>
+                                    <div class="testimonial-customer-info">
+                                        <p>
+                                            <strong> Sara Smith </strong>
+                                            <span> CEO & Founder -- Amazon </span>
+                                            <!--
+                                    <span> hooks a part of a text to something. In our case, it hooks position of the customer with his name
+                                -->
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Content box-->
+            </div>
+            <!--End of Cover box-->
+        </div>
+
+    </section>
+
+    <!--------------- Pricing ------------------------->
+    <section id="pricing">
+
+        <!-- Content box, Content Title and Content underline are generic -->
+
+        <div class="content-box">
+            <div class="content-title wow animated fadeInDown " data-wow-duration="1s" data-wow-delay=".5s">
+                <h3> Our Pricing </h3>
+                <div class="content-title-underline">
+                </div>
+            </div>
+
+            <!-- BS Grid System -->
+
+            <div class="container">
+
+                <div class="row">
+
+                    <!--
+                        Basic Pricing Column
+                    -->
+                    <div class="col-md-4 wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="pricing-box text-center">
+
+                            <h4 class="pricing-title">Basic</h4>
+                            <h3 class="pricing-value">49<sup>$</sup></h3>
+                            <ul class="pricing-spec">
+                                <li>
+                                    <p>500 Emails</p>
+                                </li>
+                                <li>
+                                    <p>5GB Disk Space</p>
+                                </li>
+                                <li>
+                                    <p>5GB Bandwidth</p>
+                                </li>
+                                <li>
+                                    <p>Unlimited Domains</p>
+                                </li>
+                            </ul>
+                            <div class="pricing-button">
+                                <a class="btn btn-lg btn-general btn-green smooth-scroll" href="#" role="button">
+                                    Purchase
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--
+                        Enterprice Pricing Column
+                    -->
+                    <div class="col-md-4 wow animated bounceInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="pricing-box middle-large-pricing-box text-center">
+
+                            <h4 class="pricing-title">Enterprice</h4>
+                            <h3 class="pricing-value">89<sup>$</sup></h3>
+                            <ul class="pricing-spec">
+                                <li>
+                                    <p>200 Emails</p>
+                                </li>
+                                <li>
+                                    <p>25GB Disk Space</p>
+                                </li>
+                                <li>
+                                    <p>25GB Bandwidth</p>
+                                </li>
+                                <li>
+                                    <p>Unlimited Domains</p>
+                                </li>
+                            </ul>
+                            <div class="pricing-button">
+                                <a class="btn btn-lg btn-general btn-white smooth-scroll" href="#" role="button">
+                                    Purchase
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--
+                        Standard Pricing Column
+                    -->
+                    <div class="col-md-4 wow animated zoomIn" data-wow-duration="1s" data-wow-delay=".5s">
+                        <div class="pricing-box text-center">
+
+                            <h4 class="pricing-title">Standard</h4>
+                            <h3 class="pricing-value">69<sup>$</sup></h3>
+                            <ul class="pricing-spec">
+                                <li>
+                                    <p>1500 Emails</p>
+                                </li>
+                                <li>
+                                    <p>15GB Disk Space</p>
+                                </li>
+                                <li>
+                                    <p>15GB Bandwidth</p>
+                                </li>
+                                <li>
+                                    <p>Unlimited Domains</p>
+                                </li>
+                            </ul>
+                            <div class="pricing-button">
+                                <a class="btn btn-lg btn-general btn-green smooth-scroll" href="#" role="button">
+                                    Purchase
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--End of Content box-->
+        </div>
+
+    </section>
+
+    <!--------------- Stats ------------------------->
+    <section id="stats">
+
+        <!-- Background/Cover Image over the entire content box - This is similar approach to Home Section -->
+
+        <div id="stats-section-cover-image" class="bg-parallax">
+
+
+            <!-- Content box, Content Title and Content underline are generic -->
+
+            <div class="content-box">
+                <div class="content-title content-title-white wow animated fadeInDown " data-wow-duration="1s" data-wow-delay=".5s">
+                    <h3> We Never Stop Improving </h3>
+                    <div class="content-title-underline">
+                    </div>
+                </div>
+
+                <!-- BS Grid System -->
+
+                <div class="container">
+                    <div class="row text-center wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+
+                        <!--
+                        STATS COLUMN - I
+                    -->
+
+                        <div class="col-md-3 col-sm-6">
+
+                            <div class="stats-item-wrapper">
+
+                                <i class="fa fa-cloud-download fa-5x"></i>
+
+                                <h2><span class="counter">1590</span><span>+</span></h2>
+
+                                <p>Downloads</p>
+
+                            </div>
+
+                        </div>
+
+                        <!--
+                        STATS COLUMN - II
+                    -->
+
+                        <div class="col-md-3 col-sm-6">
+
+                            <div class="stats-item-wrapper">
+
+                                <i class="fa fa-star-o fa-5x"></i>
+
+                                <h2><span class="counter">3500</span><span>+</span></h2>
+
+                                <p>Awards</p>
+
+                            </div>
+
+                        </div>
+
+                        <!--
+                        STATS COLUMN - III
+                    -->
+
+                        <div class="col-md-3 col-sm-6">
+
+                            <div class="stats-item-wrapper">
+
+                                <i class="fa fa-heart-o fa-5x"></i>
+
+                                <h2><span class="counter">1199</span><span>+</span></h2>
+
+                                <p>Likes</p>
+
+                            </div>
+
+                        </div>
+
+                        <!--
+                        STATS COLUMN - IV
+                    -->
+
+                        <div class="col-md-3 col-sm-6">
+
+                            <div class="stats-item-wrapper">
+
+                                <i class="fa fa-check fa-5x"></i>
+
+                                <h2><span class="counter">2200</span><span>+</span></h2>
+
+                                <p>Recommended</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--End of Content box-->
+            </div>
+            <!--End of Cover box-->
+        </div>
+
+
+    </section>
+
+    <!--------------- Clients ------------------------->
+    <section id="clients">
+
+        <!-- Content box, Content Title and Content underline are generic -->
+
+        <div class="content-box">
+            <div class="content-title wow animated fadeInDown " data-wow-duration="1s" data-wow-delay=".5s">
+                <h3> Clients </h3>
+                <div class="content-title-underline">
+                </div>
+            </div>
+
+            <!-- BS Grid System -->
+
+            <div class="container">
+                <div class="row wow animated bounceInLeft" data-wow-duration="1s" data-wow-delay=".5s">
+
+                    <div class="col-md-12">
+
+                        <div id="clients-list-mainwrapper" class="owl-carousel owl-theme">
+
+                            <!-- Client - I -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-1.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                            <!-- Client - II -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-2.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                            <!-- Client - III -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-3.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                            <!-- Client - IV -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-4.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                            <!-- Client - V -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-5.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                            <!-- Client - VI -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-6.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                            <!-- Client - VII -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-7.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                            <!-- Client - VIII -->
+                            <div class="client">
+                                <img src="img/client/logos/logo-8.jpg" class="img-responsive" alt="client">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--End of Content box-->
+        </div>
+
+    </section>
+
+    <!--------------- Footer ------------------------->
+    <!-- 
+        A <footer> element defines a footer for a webpage. It should contain information like, 
+        Contact, Site-Map, Back-To-Top link and Copyrights information.
+    -->
+    <footer>
+
+        <!-- Footer Address & Contact Form -->
+        <div id="contact">
+
+            <!-- BS Grid System -->
+
+            <div class="container custompadding">
+
+                <div class="row">
+
+                    <!-- Left side of Contact section -->
+                    <div class="col-md-6">
+                        <div id="contact-left-side-main-wrapper" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <h3> VESCO </h3>
+
+                            <p>We believe in <strong>Simple</strong>, <strong>Clean</strong> & <strong>Modern</strong> Design Standards with Responsive Approach.
+                                Browse the amazing work of our company.</p>
+
+                            <div id="contact-info">
+
+                                <!-- Address -->
+                                <address>
+
+                                    <strong>Headquarters</strong><br />
+
+                                    <p>221 Jockey Hollow, Suite 600<br />
+                                        Smithtown, NY 11787</p>
+
+                                </address>
+
+                                <!-- Phone, Fax, Email -->
+                                <div id="phone-fax-email">
+                                    <p>
+                                        <strong>Phone:</strong><span> (91) 8974 56984 </span><br />
+                                        <strong>Fax:</strong><span> (91) 66 8754 8978 </span><br />
+                                        <strong>Email:</strong><span> info@vesco.com </span><br />
+                                    </p>
+                                </div>
+
+                                <!-- Social Icons from TEAM section -->
+                                <ul class="social-list">
+
+                                    <li>
+                                        <a href="#" class="social-icon-footer icon-white">
+                                            <i class="fa fa-facebook">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-icon-footer icon-white">
+                                            <i class="fa fa-twitter">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-icon-footer icon-white">
+                                            <i class="fa fa-youtube-play">
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-icon-footer icon-white">
+                                            <i class="fa fa-google-plus">
+                                            </i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right side of Contact section -->
+                    <div class="col-md-6">
+                        <div id="contact-right-side-main-wrapper" class="wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+
+                            <h3> CONTACT US </h3>
+
+                            <!-- 
+                                    In the action attribute, I can define the url value as to where to send the data collected from the form.
+                                -->
+                            <form action="#">
+
+                                <input type="text" name="full-name" placeholder="Full Name" class="form-controller">
+
+                                <input type="text" name="email" placeholder="E-Mail Address" class="form-controller">
+
+                                <textarea rows="5" name="message" placeholder="Write here ...." class="form-controller"></textarea>
+
+                                <!-- BS button classes are btn and btn-lg -->
+                                <div id="send-button">
+                                    <a class="btn btn-lg btn-general btn-white smooth-scroll" href="#" role="button"> SEND </a>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--End of Main Contact Wrapper-->
+        </div>
+
+        <!-- Footer Bottom Copyright & Navigation -->
+        <div id="footer-bottom">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <!-- Copyrights -->
+                    <div class="col-md-6">
+
+                        <div id="footer-copyrights">
+                            <p>Copyrights &copy; 2017 All Rights Reserved by Vesco Inc.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Footer Navigation Menu -->
+                    <!-- BS3 hidden-sm class hides the footer menu for small screen sizes. -->
+                    <div class="col-md-6 hidden-sm hidden-xs">
+                        <div id="footer-menu">
+
+                            <ul>
+                                <li><a class="smooth-scroll" href="#home"> Home </a> / </li>
+                                <li><a class="smooth-scroll" href="#services"> Services </a> / </li>
+                                <li><a class="smooth-scroll" href="#about"> About </a> / </li>
+                                <li><a class="smooth-scroll" href="#work"> Work </a> / </li>
+                                <li><a class="smooth-scroll" href="#team"> Team </a> / </li>
+                                <li><a class="smooth-scroll" href="#testimonials"> Testimonials </a> / </li>
+                                <li><a class="smooth-scroll" href="#pricing"> Pricing </a> / </li>
+                                <li><a class="smooth-scroll" href="#stats"> Stats </a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back To Top Button -->
+        
+        <!-- .btn and .btn-sm are BS predefined button classes -->
+        <a href="#home" id="back-to-top" class="btn btn-sm btn-green button-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+            <i class="fa fa-angle-up"></i>
+        </a>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- Temporary breaks 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    -->
+
+
+
+
+
+
+    <!--------------- JQuery Libraries ------------------------->
+    <!-- JQuery, Bootstrap JS, WOW JS (for animate upon scroll), Magnific Popup core JS, Owl Carousel JS, Counter JS, JQuery Easing & custom JS -->
+
+    <!--
+        JQuery library script is appended/added first because we need bootstrap JS, WOW JS & custom.js file requires JQuery library.
+        custom JS Could be added in head section but devs prefer here just before </body> because we want the browser to render all the contents of the webpage and then load our JS file.
+        script tag is used to define the clientside JS 
+    -->
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+
+    <!-- activation code by wow.js for animation upon page scrolling-->
+    <script>
+        new WOW().init();
+    </script>
+
+    <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+
+    <script src="js/counter/jquery.waypoints.min.js"></script>
+    <script src="js/counter/jquery.counterup.min.js"></script>
+
+    <script src="js/easing/jquery.easing.1.3.js"></script>
+
+    <script src="js/custom.js"></script>
+</body>
+
+
+</html>

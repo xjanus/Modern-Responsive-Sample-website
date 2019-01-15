@@ -1,0 +1,827 @@
+/*======================================================
+                     DEFAULT VALUES
+
+             Font Family:         Roboto Condensed Font
+   Alternate Font Family:         Sans-serif
+   
+           Greenish Blue:         #34c6d3              (Buttons, Icons, Links, Lines & Backgrounds)
+              Steel Grey:         #41464b              (Headings)
+             Blue Bayoux:         #64707b              (Paragraphs)
+                   White:         #fff                 (Text with Black Backgrounds)
+                   Black:         #000
+
+=======================================================*/
+
+/*===========================================================
+                    BASIC INFORMATION
+
+***> Inline elements in HTML:
+
+<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
+
+***> Block level elements in HTML:
+
+<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><output><p><pre><section><table><tfoot><ul><video>
+
+********************
+HTML Grouping Tags
+
+***> THE <div> Element:
+
+The <div> element is often used as a container for other HTML elements.
+
+The <div> element has no required attributes, but style, class and id are common.
+
+***> THE <span> Element:
+
+The <span> element is often used as a container for some text.
+
+The <span> element has no required attributes, but style, class and id are common.
+===========================================================*/
+/*======================================================
+                    General CSS
+=======================================================*/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+
+    font-family: "Roboto Condensed", sans-serif;
+
+}
+
+p {
+    color: #64707b;
+    /* Blue Bayoux */
+    font-size: 16px;
+    font-weight: 300;
+}
+
+h3 {
+    color: #41464b;
+    /*Steel Grey */
+    text-transform: uppercase;
+}
+
+/*======================================================
+                        CONTENT (Generic)
+=======================================================*/
+
+.content-box {
+    padding: 60px 0 60px 0;
+    /* spreading all the content within the <div> box apart */
+
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+    /* Separates <div> from other <div> content */
+}
+
+.content-title-underline {
+    width: 30px;
+    height: 3px;
+    background-color: #34c6d3;
+    margin: 0 auto 30px auto;
+}
+
+.content-title-white h3 {
+    color: #fff;
+}
+
+/*======================================================
+                        PARALLAX (Generic)
+=======================================================*/
+.bg-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Resize the background image to cover the entire container, even if it has to stretch the image or cut a little edge off */
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax scrolling effect */
+}
+
+/*======================================================
+                        BUTTONS (Generic)
+=======================================================*/
+/* Create class within css by doing .classname {} */
+
+/* Everything related to the border, font size, weight and distance of text from the border */
+.btn-general {
+    border-width: 2px;
+    border-radius: 0;
+    /* to remove the curved borders */
+    padding: 12px 26px 12px 26px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+/* Specific related to the home page button */
+.btn-white {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* using pseudo class for when mouse hovers over or focuses over the button */
+
+.btn-white:hover,
+.btn-white:focus {
+    background-color: #fff;
+    color: #41464b;
+    /* Turn text steel grey rather than default black when mouse hovers */
+}
+
+/* Specific related to the about page button */
+.btn-green {
+    border-color: #34c6d3;
+    color: #34c6d3;
+}
+
+.btn-green:hover,
+.btn-green:focus {
+    background-color: #34c6d3;
+    color: #fff;
+    /* Turn text steel grey rather than default black when mouse hovers */
+}
+
+.button-back-to-top {
+
+    position: fixed;
+    /* fixed position with respect to the browser window.*/
+    bottom: 20px;
+    /* bottom position value */
+    right: 20px;
+    /* right position value */
+    font-size: 22px;
+    padding: 3px 15px;
+    border-radius: 0;
+    display: none;
+    /* This way the button will become invisible. We will show/hide button using JQuery */
+
+}
+
+/*======================================================
+                        HOME
+=======================================================*/
+
+#home {
+    height: 100%;
+}
+
+#home-cover {
+    height: 100%;
+    background-image: url("../img/bg-home.jpg");
+}
+
+#home-content-box {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#home-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+    /* text-align: center; */
+}
+
+#home-heading h3 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+
+
+/*======================================================
+                        ANIMATE
+=======================================================*/
+
+/* -webkit ... are vendor prefixes as in some browsers like safari we found the animations to not work according to our specifications. So, we use https://autoprefixer.github.io/ to fix these issues with css prefixes */
+
+#home-cover,
+#home-heading,
+#home-button {
+    -webkit-animation-duration: .5s;
+            animation-duration: .5s;
+}
+
+#home-cover {
+    -webkit-animation-delay: .1s;
+            animation-delay: .1s;
+}
+
+#home-heading {
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+}
+
+#home-button {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+
+
+/*======================================================
+                        SERVICE
+=======================================================*/
+.service-items {
+    padding: 20px 0 20px 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.service-item-icon i {
+    color: #34c6d3;
+    float: left;
+    padding: 15px;
+    margin-right: 25px;
+    width: 75px;
+    height: 75px;
+    text-align: center;
+
+}
+
+.service-items:hover .service-item-icon i {
+    color: #fff;
+    background-color: #34c6d3;
+}
+
+.service-item-title h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.service-item-description p {
+    margin: 0;
+    padding-left: 85px;
+}
+
+/*======================================================
+                        ABOUT
+=======================================================*/
+
+#about-BG-Diagonal {
+    width: 60%;
+    height: 700px;
+    float: right;
+    background-image: url("../img/bg-about.jpg");
+    border-left: 200px solid #fff;
+    border-top: 700px solid transparent;
+}
+
+#about-content-box {
+    float: left;
+    height: 700px;
+    /* Height of the diagonal box on right side */
+
+}
+
+#about-content-box-outer {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#about-content-box-inner {
+    display: table-cell;
+    vertical-align: middle;
+
+}
+
+/* To Target h3 element "About Vesco" within about and within  the nested element of about */
+
+#about .content-title h3 {
+    text-align: left;
+}
+
+#about .content-title-underline {
+    margin: 0 0 30px 0;
+}
+
+#about-description {
+    margin-bottom: 30px;
+    /* In Chrome Inspect, all other values were found 0 except for bottom margin of 10. We need more. So changed it here. */
+}
+
+/*======================================================
+                        WORK
+=======================================================*/
+/*
+Gutters or alleys are spacing between content tracks. These can be created in CSS Grid.
+To select <div> class "col-md-3" instead of a combo of id+class or class+selector, we first gave a unique class "no-gutter" for row identification and then use[class*=col-] meaning, select all the classes with col- as their starting under .row.no-gutter class.
+*/
+.row.no-gutters [class*=col-] {
+    padding-right: 0;
+    /* padding was 15px when seen under inspect element. */
+    padding-left: 0;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.5);
+    cursor: zoom-in;
+    
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    cursor: -webkit-zoom-in;
+    /* The '+' sign zoom-in magnifying glass icon is now visible along with CSS browser prefixes */
+}
+
+/* 
+overflow property can only be applied to Block Level elements like <div> 
+*/
+.image-wrapper {
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    transition: transform .5s ease;
+    /* browser prefixes */
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    -o-transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+/*======================================================
+                        TEAM
+=======================================================*/
+
+.team-member {
+    margin: 0 15px 0 15px;
+}
+
+.team-member-info {
+    padding: 10px 0 30px 0;
+    /* wide space around the team-member-info div */
+}
+
+/* Styling the name element */
+
+h4.team-member-name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    /* Distance between letters */
+    padding-top: 2px;
+}
+
+h4.team-member-designation {
+    color: #34c6d3;
+    font-size: 15px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.social-list {
+    padding-left: 0px;
+}
+
+.social-list li {
+    list-style: none;
+    /* This will erase the bullet point.*/
+    display: inline-block;
+    /* All the vertically aligned items would switch to horizontal alignment. */
+    width: 32px;
+    /* Width of list element. Not the icon. To access icon we need to get inside <i> of that icon. */
+    height: 32px;
+    margin-right: 6px;
+    margin-top: 10px;
+}
+
+/* Increase the size of the icon */
+.social-icon i {
+    font-size: 16px;
+}
+
+.icon-grey i {
+    color: #64707b;
+}
+
+.social-icon i:hover {
+    color: #34c6d3;
+}
+
+/*======================================================
+                    TESTIMONIALS
+=======================================================*/
+
+/* Testimonial Background Image */
+#testimonial-section-cover-image {
+    background-image: url("../img/bg-testimonials.jpg");
+}
+
+/* We cannot use the above id #testimonial-section-cover-image to include background color because the content box is in front of the cover image and will act as an overlay of transparent / opaque box. Because we arent changing the background image property. We ra ejust adding the layer of transparency in front of it. */
+
+#testimonials .content-box {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Padding to add some white space at the Topand Bottom */
+#customer-testimonials-wrapper {
+    padding: 50px 0;
+}
+
+/* Set the width of the image and center align it. 
+*/
+.testimonials img {
+    max-width: 120px;
+    margin: 0 auto 0 auto;
+}
+
+/* There is bar within the blobkquote element. If we change the color to border-color:#fff; it's visible. We remove it by border: 0;
+It is IMPORTANT to NOTE that all the properties like font-family, font-style and padding were inherited from <blockquote> to <p> element. But not the color property. Because some properties cannot be inherited.
+*/
+.testimonials blockquote {
+    /*border-color: #fff;
+    */
+    border: 0;
+    font-family: Georgia, sans-serif;
+    font-style: italic;
+    color: #fff;
+    padding: 6px 150px;
+
+    /* BlockQuote is the parent element of before and after elements.To set the quotes on left and right resp. we are using relative position property.
+    Any element within this blockquote will be positioned relative to the blockquote element */
+    position: relative;
+}
+
+.testimonials blockquote p {
+    color: #fff;
+}
+
+/*
+To add something before the content of an element, we can use css before selector.
+The content property is used with the ::before and ::after pseudo-elements, to insert generated content.
+To add quotation marks, we directly used the entity number from https://www.w3schools.com/cssref/pr_gen_quotes.asp
+*/
+.testimonials blockquote::before {
+    content: "\201C";
+    /* left quotation mark */
+
+    /* To move the quotation mark to top left */
+    top: 0;
+    left: 100px;
+}
+
+.testimonials blockquote::after {
+    content: "\201D";
+    /* left quotation mark */
+
+    bottom: 0;
+    right: 100px;
+}
+
+.testimonials blockquote::before,
+.testimonials blockquote::after {
+    font-size: 80px;
+    font-style: normal;
+    line-height: 1;
+    /* line-height defines the space above or below the in-line elements */
+    width: 30px;
+    height: 30px;
+
+    /* By setting these child elements to absolute, we can move them relative to the parent blockquote element */
+    position: absolute;
+}
+
+.testimonial-customer-info p {
+    color: #fff;
+    font-size: 17px;
+}
+
+/*
+display: inline; causes the contents within the element to come adjacent to one anorther. display: block; is the opposite. It will seperate content within <strong> from the content of another child element, namely, <span> 
+*/
+.testimonial-customer-info strong {
+    display: block;
+}
+
+/*======================================================
+                     PRICING
+=======================================================*/
+
+.pricing-box {
+    border: 3px solid #34c6d3;
+    padding: 50px 0px;
+    margin: 40px 0px;
+}
+
+h4.pricing-title {
+    background-color: #34c6d3;
+    color: #fff;
+    /* The title gets width and height as per its content */
+    display: inline-block;
+    padding: 7px 15px;
+    /* padding will increase the green color box around the title */
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
+
+h3.pricing-value {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h3.pricing-value sup {
+    font-size: 28px;
+    font-weight: normal;
+    vertical-align: super;
+    /* It will align the superscript element as a superscript */
+}
+
+ul.pricing-spec {
+    list-style: none;
+    /* bullet points removed */
+    padding-left: 0;
+    margin: 20px 0 60px 0;
+}
+
+ul.pricing-spec li p {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.middle-large-pricing-box {
+    padding: 90px 0;
+    margin: 0;
+    /* This way it will push the middle pricing table up */
+    background-color: #34c6d3;
+}
+
+.middle-large-pricing-box h4.pricing-title {
+    color: #34c6d3;
+    background-color: #fff;
+}
+
+.middle-large-pricing-box ul.pricing-spec li p {
+    color: #fff;
+}
+
+/*======================================================
+                     STATS
+=======================================================*/
+
+#stats-section-cover-image {
+    background-image: url("../img/bg-stats.jpg");
+}
+
+#stats .content-box {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.stats-item-wrapper {
+    padding: 100px 0;
+}
+
+.stats-item-wrapper i {
+    color: #34c6d3;
+}
+
+.stats-item-wrapper h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+.stats-item-wrapper p {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/*======================================================
+                     CLIENTS
+=======================================================*/
+
+.client {
+    padding: 40px 0;
+    /* Wide space at the top and bottom of each logo */
+}
+
+/*======================================================
+                     CONTACT
+=======================================================*/
+
+.custompadding {
+    padding-bottom: 15px;
+}
+
+footer {
+    background-color: #41464b;
+    padding-top: 30px;
+    border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+#contact-left-side-main-wrapper h3,
+#contact-right-side-main-wrapper h3 {
+    color: #fff;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+#contact-left-side-main-wrapper p {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/*
+                    BACKGROUND REPEAT
+The background-repeat property sets if/how a background image will be repeated.
+
+By default, a background-image is repeated both vertically and horizontally.
+
+Tip: The background image is placed according to the background-position property. 
+If no background-position is specified, the image is always placed at the element's top left corner.
+*/
+#contact-info {
+    background-image: url("../img/world-map.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* Resize the background image to make sure the image is fully visible or 
+    Scales the image as large as possible without cropping or stretching the image.*/
+}
+
+address {
+    color: #fff;
+}
+
+address strong {
+    font-size: 16px;
+}
+
+address strong,
+#phone-fax-email strong {
+    letter-spacing: 1px;
+}
+
+form .form-controller {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border-radius: 0;
+    border-color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.social-icon-footer i {
+    font-size: 22px;
+}
+
+.icon-white i {
+    color: #fff;
+}
+
+/*======================================================
+                FOOTER COPYRIGHTS & MENU
+=======================================================*/
+
+#footer-bottom {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 60px;
+
+}
+
+#footer-copyrights p {
+    margin-left: 17px;
+    color: #fff;
+}
+
+#footer-menu {
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+#footer-menu ul {
+    list-style: none;
+    /* to delete bullets */
+    padding-left: 0;
+    margin: 0;
+}
+
+#footer-menu ul li {
+    display: inline-block;
+}
+
+#footer-menu a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#footer-menu a:hover {
+    color: #34c6d3;
+}
+
+/*======================================================
+                    NAVIGATION
+=======================================================*/
+
+.navbar {
+    padding: 20px 0;
+    /* 
+    To make the Show and Hide of the Black Navigation Background Smooth, we use the CSS transition property. 
+    transition property allows the change of values smoothly over a given duration. 
+    all: all the properties of this navbar to transition smoothly
+    .5s: Duration of the smoothly transitioning from show to hide or vice-versa.
+    ease-in-out: the change happens slowly both at the beginning and end, and speeds up only in the middle somewhere. 
+    Meaning:
+
+    ease-in: slow at the beginning, fast/abrupt at the end
+    ease-out: fast/abrupt at the beginning, slow at the end
+    
+    Usage:
+    
+    ease-in: when things are moving out.
+    ease-out: when things are moving in.
+
+    */
+    /*transition: all 0.5s ease-in-out;*/
+    -webkit-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;
+
+}
+
+/* For transparent background on top navigation */
+.vesco-top-navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 7px 0;
+}
+
+/* To create left and right spaces */
+.vesco-nav-wrapper {
+    padding: 0 85px;
+}
+
+/* To move the navigation bar on the right side */
+.navbar-nav {
+    float: right;
+}
+
+/* > is the CSS immediate child operator */
+.navbar-nav > li > a {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* to avoid the automatic white background upon hover from the BS class */
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    background: none;
+    color: #34c6d3;
+
+}
+
+/* To create Toggle button */
+.navbar-toggle {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff;
+    border-radius: 0;
+    /* corner curves are gone */
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/* to keep the max height of the menu bar from the toggle menu to full height */
+.navbar-collapse {
+    max-height: none !important;
+    /* !important will overwrite the CSS rule from BS */
+}
+
+/* 
+We have added the scroll spy attribute to the body. We are going to use the 'active' attribute that we inspected using chrome developer tools, to HIGHLIGHT the menu corresponding to the section of the webpage being browsed. Upon perusing the inspect element on the menu, we find the based on the section of the webpage we are in, the corresponding <li> in the menu shows the class - 'active'.
+*/
+
+.vesco-top-navbar ul.navbar-nav > li.active > a {
+    color: #34c6d3;
+}
